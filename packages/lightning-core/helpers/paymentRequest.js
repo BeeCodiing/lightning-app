@@ -5,5 +5,5 @@ export const decoratePaymentRequest = (pr) => {
 }
 
 export const sanitizePaymentRequest = (pr) => {
-  return pr.replace(prefix, '')
+  return pr.replace(/lightning:(\/\/)?/g, '')
 }
